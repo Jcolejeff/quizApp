@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { useGlobalContext } from "./context";
+import { Main, Section, Buttons } from "./App";
 
 const SetupForm = () => {
   const { quiz, handleChange, handleSubmit, error } = useGlobalContext();
   return (
-    <main>
-      <section className="quiz quiz-small">
-        <form className="setup-form">
-          <h2>setup quiz</h2>
+    <Main>
+      <Section>
+        <h2>setup quiz</h2>
+        <Form className="setup-form">
           {/* amount */}
           <div className="form-control">
             <label htmlFor="amount">number of questions</label>
@@ -35,6 +36,7 @@ const SetupForm = () => {
               onChange={handleChange}
             >
               <option value="General">General</option>
+              <option value="Mythology">Mythology</option>
               <option value="Books"> Books</option>
               <option value="Film"> Film</option>
               <option value="Music"> Music</option>
@@ -44,7 +46,6 @@ const SetupForm = () => {
               <option value="Nature<">Nature</option>
               <option value="Computers"> Computers</option>
               <option value="Mathematics"> Mathematics</option>
-              <option value="Mythology">Mythology</option>
               <option value="Sports">Sports</option>
               <option value="Geography">Geography</option>
               <option value="History">History</option>
@@ -78,13 +79,45 @@ const SetupForm = () => {
               can't generate questions, please try different options
             </p>
           )}
-          <button type="submit" onClick={handleSubmit} className="submit-btn">
+          <Buttons type="submit" onClick={handleSubmit}>
             start
-          </button>
-        </form>
-      </section>
-    </main>
+          </Buttons>
+        </Form>
+      </Section>
+    </Main>
   );
 };
+const Form = styled.form`
+  margin-bottom: 2rem;
+  .form-control {
+    margin-bottom: 2rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .form-control label {
+    display: block;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--clr-grey-3);
+    margin-bottom: 0.5rem;
+  }
+  .form-input {
+    border: none;
+    background: var(--clr-grey-10);
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    border-radius: var(--radius);
+  }
+  .error {
+    color: var(--clr-red-dark);
+    text-transform: capitalize;
+  }
+  .submit-btn {
+    width: 100%;
+    margin-top: 3rem;
+  }
+`;
 
 export default SetupForm;
