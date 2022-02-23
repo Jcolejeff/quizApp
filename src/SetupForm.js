@@ -8,7 +8,7 @@ const SetupForm = () => {
   return (
     <Main>
       <Section>
-        <h2>setup quiz</h2>
+        <h2>Triva Setup</h2>
         <Form>
           {/* amount */}
           <div className="form-control">

@@ -92,8 +92,12 @@ export const Section = styled.section`
   max-width: 800px;
   margin: 4rem auto;
   background: #fff;
-  border-radius: 0, 25rem;
+  border-radius: 1.5rem;
   padding: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  h2 {
+    font-family: "Segoe UI", Roboto, Oxygen;
+  }
 `;
 const CorrectAnswers = styled.p`
   font-size: 0.8rem;
