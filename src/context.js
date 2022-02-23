@@ -38,7 +38,7 @@ const AppProvider = ({ children }) => {
   const [error, setError] = useState(false);
   const [quiz, setQuiz] = useState({
     amount: 5,
-    category: "General",
+    category: "Computers",
     difficulty: "easy",
   });
 

@@ -38,6 +38,7 @@ const SetupForm = () => {
                 value={quiz.category}
                 onChange={handleChange}
               >
+                <option value="Computers"> Computers</option>
                 <option value="General">General</option>
                 <option value="Mythology">Mythology</option>
                 <option value="Books"> Books</option>
@@ -47,7 +48,6 @@ const SetupForm = () => {
                 <option value="VideoGames"> Video-Games</option>
                 <option value="BoardGames"> Board-Games</option>
                 <option value="Nature<">Nature</option>
-                <option value="Computers"> Computers</option>
                 <option value="Mathematics"> Mathematics</option>
                 <option value="Sports">Sports</option>
                 <option value="Geography">Geography</option>
