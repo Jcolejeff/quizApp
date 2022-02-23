@@ -9,7 +9,7 @@ const SetupForm = () => {
     <Main>
       <Section>
         <h2>setup quiz</h2>
-        <Form className="setup-form">
+        <Form>
           {/* amount */}
           <div className="form-control">
             <label htmlFor="amount">number of questions</label>

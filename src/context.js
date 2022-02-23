@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, createContext } from "react";
 
 const table = {
   General: 9,
@@ -27,7 +27,7 @@ const table = {
 
 const API_ENDPOINT = "https://opentdb.com/api.php?";
 
-const AppContext = React.createContext();
+const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [waiting, setWaiting] = useState(true);

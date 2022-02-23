@@ -66,7 +66,7 @@ function App() {
             })}
           </div>
         </Container>
-        <Buttons onClick={nextQuestion}>next question</Buttons>
+        <Buttons onClick={nextQuestion}>next</Buttons>
       </Section>
     </Main>
   );
@@ -88,7 +88,7 @@ const Container = styled.article`
   }
 `;
 export const Section = styled.section`
-  width: 95vw;
+  width: 88vw;
   max-width: 800px;
   margin: 4rem auto;
   background: #fff;
@@ -137,7 +137,7 @@ export const Buttons = styled.button`
   font-weight: 700;
   letter-spacing: var(--spacing);
   font-size: 1rem;
-  background: #00ff95;
+  background: #75e6da;
   color: var(--clr-black);
   transition: var(--transition);
   cursor: pointer;
