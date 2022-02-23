@@ -5,6 +5,7 @@ import styled from "styled-components";
 import SetupForm from "./SetupForm";
 import Loading from "./Loading";
 import Modal from "./Modal";
+import Fade from "react-reveal/Fade";
 function App() {
   const {
     waiting,
@@ -47,27 +48,29 @@ function App() {
   return (
     <Main>
       <Modal />
-      <Section>
-        <CorrectAnswers>
-          correct answers : {correct}/{index}
-        </CorrectAnswers>
-        <Container>
-          <h2 dangerouslySetInnerHTML={{ __html: question }} />
-          <div className="btn-container">
-            {answers.map((answer, index) => {
-              return (
-                <Button
-                  key={index}
-                  className="answer-btn"
-                  onClick={() => checkAnswer(correct_answer === answer)}
-                  dangerouslySetInnerHTML={{ __html: answer }}
-                />
-              );
-            })}
-          </div>
-        </Container>
-        <Buttons onClick={nextQuestion}>next</Buttons>
-      </Section>
+      <Fade>
+        <Section>
+          <CorrectAnswers>
+            correct answers : {correct}/{index}
+          </CorrectAnswers>
+          <Container>
+            <h2 dangerouslySetInnerHTML={{ __html: question }} />
+            <div className="btn-container">
+              {answers.map((answer, index) => {
+                return (
+                  <Button
+                    key={index}
+                    className="answer-btn"
+                    onClick={() => checkAnswer(correct_answer === answer)}
+                    dangerouslySetInnerHTML={{ __html: answer }}
+                  />
+                );
+              })}
+            </div>
+          </Container>
+          <Buttons onClick={nextQuestion}>next</Buttons>
+        </Section>
+      </Fade>
     </Main>
   );
 }
@@ -77,6 +80,7 @@ export const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 `;
 const Container = styled.article`
   h2 {
@@ -90,10 +94,10 @@ const Container = styled.article`
 export const Section = styled.section`
   width: 88vw;
   max-width: 800px;
-  margin: 4rem auto;
+  margin: 1rem auto;
   background: #fff;
   border-radius: 1.5rem;
-  padding: 3rem;
+  padding: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   h2 {
     font-family: "Segoe UI", Roboto, Oxygen;
