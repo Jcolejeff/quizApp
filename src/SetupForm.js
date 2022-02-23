@@ -107,7 +107,8 @@ const Form = styled.form`
     font-family: "Segoe UI", Roboto, Oxygen;
     font-style: italic;
     font-weight: 400;
-    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.61);
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.21);
+    text-align: center;
   }
   margin-bottom: 2rem;
   .form-control {
