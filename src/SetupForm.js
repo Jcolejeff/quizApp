@@ -8,9 +8,9 @@ const SetupForm = () => {
   const { quiz, handleChange, handleSubmit, error } = useGlobalContext();
   return (
     <Main>
+      <h2>Triva Setup</h2>
       <Roll>
         <Form>
-          <h2>Triva Setup</h2>
           <Section>
             {/* amount */}
             <div className="form-control">

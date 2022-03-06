@@ -26,6 +26,7 @@ function App() {
       clearInterval(slider);
     };
   }, [nextQuestion]);
+
   if (waiting) {
     return <SetupForm />;
   }
@@ -81,6 +82,12 @@ export const Main = styled.main`
   justify-content: center;
   align-items: center;
   flex: 1;
+  flex-direction: column;
+  h2 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: 400;
+  }
 `;
 const Container = styled.article`
   h2 {
