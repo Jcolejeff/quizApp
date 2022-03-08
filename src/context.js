@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useContext, createContext } from "react";
 
+// setting up corresponding categories to the number at the api call
 const table = {
   General: 9,
   Books: 10,
@@ -90,11 +91,13 @@ const AppProvider = ({ children }) => {
     setCorrect(0);
     setIsModalOpen(false);
   };
+  // handling the setup form
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setQuiz({ ...quiz, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { amount, category, difficulty } = quiz;
@@ -105,6 +108,7 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
+      // state values i want the whole app to have access to
       value={{
         waiting,
         loading,
@@ -125,7 +129,7 @@ const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
-// make sure use
+// exporting the custom hook that returns our store
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

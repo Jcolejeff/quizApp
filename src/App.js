@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useGlobalContext } from "./context";
 import styled from "styled-components";
 
@@ -7,6 +7,7 @@ import Loading from "./Loading";
 import Modal from "./Modal";
 import Fade from "react-reveal/Fade";
 function App() {
+  // getting states from store
   const {
     waiting,
     loading,
@@ -17,16 +18,7 @@ function App() {
     checkAnswer,
   } = useGlobalContext();
 
-  //  changing the question very 10s
-  useEffect(() => {
-    let slider = setInterval(() => {
-      nextQuestion();
-    }, 10000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [nextQuestion]);
-
+  // returning a component based on some conditions
   if (waiting) {
     return <SetupForm />;
   }
@@ -36,7 +28,7 @@ function App() {
 
   const { question, incorrect_answers, correct_answer } = questions[index];
 
-  // const answers = [...incorrect_answers, correct_answer]
+  // making sure the answers are on random options on each question
   let answers = [...incorrect_answers];
   const tempIndex = Math.floor(Math.random() * 4);
   if (tempIndex === 3) {
@@ -55,6 +47,7 @@ function App() {
             correct answers : {correct}/{index}
           </CorrectAnswers>
           <Container>
+            {/* api returns html ,so i had to insert directly */}
             <h2 dangerouslySetInnerHTML={{ __html: question }} />
             <div className="btn-container">
               {answers.map((answer, index) => {
@@ -83,6 +76,9 @@ export const Main = styled.main`
   align-items: center;
   flex: 1;
   flex-direction: column;
+  padding: 1rem;
+  margin-block-start: 2rem;
+
   h2 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
