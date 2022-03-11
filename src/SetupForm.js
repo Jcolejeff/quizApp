@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { useGlobalContext } from "./context";
 import { Main, Buttons } from "./App";
 import Roll from "react-reveal/Roll";
+import logo from "./Minimalist Modern Technology Store Logo Box (1).png";
 
 const SetupForm = () => {
   const { quiz, handleChange, handleSubmit, error } = useGlobalContext();
   return (
     <Main>
-      <h2>Triva Setup</h2>
+      <div className="logo1">
+        <img src={logo} alt="" />
+      </div>
       <Roll>
         <Form>
           <Section>
@@ -93,12 +96,12 @@ const SetupForm = () => {
   );
 };
 const Section = styled.section`
-  width: 88vw;
+  width: 70vw;
   max-width: 800px;
   margin: 1rem auto;
   background: #fff;
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
@@ -110,7 +113,7 @@ const Form = styled.form`
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.21);
     text-align: center;
   }
-  margin-bottom: 2rem;
+
   .form-control {
     margin-bottom: 2rem;
   }

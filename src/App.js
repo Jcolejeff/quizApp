@@ -77,7 +77,15 @@ export const Main = styled.main`
   flex: 1;
   flex-direction: column;
   padding: 1rem;
-  margin-block-start: 2rem;
+  .logo1 {
+    margin-top: 0rem;
+    position: absolute;
+    width: 20rem;
+    bottom: 72%;
+    img {
+      width: 100%;
+    }
+  }
 
   h2 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -95,11 +103,11 @@ const Container = styled.article`
   }
 `;
 export const Section = styled.section`
-  width: 88vw;
+  width: 90vw;
   max-width: 800px;
-  margin: 1rem auto;
+  margin: 0rem auto;
   background: #fff;
-  border-radius: 1.5rem;
+  border-radius: 0.6rem;
   padding: 1rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   h2 {
