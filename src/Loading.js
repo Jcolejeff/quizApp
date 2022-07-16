@@ -14,10 +14,10 @@ const Main = styled.main`
 		width: 6rem;
 		height: 6rem;
 		margin: 0 auto;
-		margin-top: 10rem;
+		margin-top: 6rem;
 		border-radius: 50%;
 		border: 3px solid #ccc;
-		border-top-color: var(--clr-primary-5);
+		border-top-color: #75e6da;
 		animation: spinner 0.6s linear infinite;
 	}
 `;
