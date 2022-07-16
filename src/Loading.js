@@ -9,7 +9,7 @@ const Loading = () => {
 	);
 };
 
-const Main = styled.main`
+const Main = styled.section`
 	.loading {
 		width: 6rem;
 		height: 6rem;
