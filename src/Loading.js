@@ -9,12 +9,11 @@ const Loading = () => {
 	);
 };
 
-const Main = styled.section`
+const Main = styled.main`
 	.loading {
 		width: 6rem;
 		height: 6rem;
 		margin: 0 auto;
-		margin-top: 6rem;
 		border-radius: 50%;
 		border: 3px solid #ccc;
 		border-top-color: #75e6da;
