@@ -13,11 +13,11 @@ An interactive trivia webapp
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./quizzles.png)
 
 ### Links
 
-- Live Site URL: [live](https://trivia-plus.netlify.app/)
+- Live Site URL: [live](https://quizzles-plus.netlify.app/)
 
 ## My process
 
@@ -30,7 +30,7 @@ An interactive trivia webapp
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-- OPENTDB API
+- OPEN-TDB API
 
 ## HOW TO RUN
 
