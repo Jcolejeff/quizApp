@@ -1,23 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const Loading = () => {
 	return (
 		<Main>
-			<div className="loading"></div>
+			<div>
+				<Skeleton
+					count={1}
+					highlightColor="#00ffff"
+					height="60vh"
+					baseColor="#6949fd"
+				/>
+			</div>
 		</Main>
 	);
 };
 
 const Main = styled.main`
-	.loading {
-		width: 6rem;
-		height: 6rem;
-		margin: 0 auto;
-		border-radius: 50%;
-		border: 3px solid #ccc;
-		border-top-color: #75e6da;
-		animation: spinner 0.6s linear infinite;
-	}
+	display: block;
+	margin-inline: auto;
+	margin-block-start: 10rem;
+	width: 95%;
+	line-height: 2;
+	justify-items: center;
 `;
 export default Loading;

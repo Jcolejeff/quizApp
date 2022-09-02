@@ -4,12 +4,13 @@ import { useGlobalContext } from "./context";
 import { Buttons } from "./App";
 import Roll from "react-reveal/Roll";
 import logo from "./Minimalist Modern Technology Store Logo Box (1).png";
+import Fade from "react-reveal/Fade";
 
 const SetupForm = () => {
 	const { quiz, handleChange, handleSubmit, error } = useGlobalContext();
 	return (
 		<main>
-			<Roll>
+			<Fade top triggerOnce={true}>
 				<Form>
 					{/* amount */}
 					<div className="form-control">
@@ -86,7 +87,7 @@ const SetupForm = () => {
 						start
 					</button>
 				</Form>
-			</Roll>
+			</Fade>
 		</main>
 	);
 };

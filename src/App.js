@@ -45,7 +45,7 @@ function App() {
 	return (
 		<Main>
 			<Modal />
-			<Fade>
+			<Fade top triggerOnce={true}>
 				<p>
 					correct answers : {correct}/{index}
 				</p>
